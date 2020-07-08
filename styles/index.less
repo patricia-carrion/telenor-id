@@ -128,6 +128,13 @@ header {
         overflow: hidden;
     }
 }
+
+.CTA-img {
+    background-image: url("../img/image2.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
 footer {
     background: blueviolet;
     display: flex;
@@ -212,44 +219,100 @@ header {
     min-height: 100px;
     align-items: center;
 }
+
+// Objects
+// Wrapping and constraining elements
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.page-wrapper {
+    width: 100%;
+    transition: all .25s ease;
+    margin: 0px auto;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    min-height: 0px;
+    overflow-y: auto;
+}
+
+// Media queries
+@media (min-width: 576px) {
+    .page-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-wrapper {
+        max-width: 95%;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-wrapper {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-wrapper {
+        max-width: 75%;
+    }
+}
+
 // Flexbox
 .dflex {
     display: flex;
 }
+
 .hbox:extend(.dflex) {
     flex-direction: row; // items organized horizontally from left to right
     &.reverse {
         flex-direction: row-reverse;
     }
 }
+
 .vbox:extend(.dflex) {
     flex-direction: column; // items organized vertically from top to bottom
     &.reverse {
         flex-direction: column-reverse;
     }
 }
+
 [class^="flex-"] {
     max-width: 100%;
     min-height: 0px !important;
 }
+
 .flex-1 {
     flex: 1;
 }
+
 .flex-2 {
     flex: 2;
 }
+
 .flex-3 {
     flex: 3;
 }
+
 .flex-wrap {
     flex-wrap: wrap;
 }
+
 .flex-items-start {
     align-items: flex-start;
 }
+
 .flex-items-end {
     align-items: flex-end;
 }
+
 .flex-items-center {
     align-items: center;
 }
