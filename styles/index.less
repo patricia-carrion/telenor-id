@@ -48,15 +48,17 @@ table {
 // General text styles
 html {
     font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: @body-size;
+    font-size: @tbody-size;
     font-weight: 400;
 }
-p.text-body {
+
+p.tbody {
     font-weight: 300;
     &.small {
-        font-size: @small-under-body-text;
+        font-size: @tbody-size-sm;
     }
 }
+
 h1 {
     font-size: @hero-title;
 }
@@ -100,7 +102,7 @@ header {
         }
     }
     & a {
-        font-size: @body-size;
+        font-size: @tbody-size;
         text-decoration: none;
         color: @secondary-color;
         &:hover {
@@ -162,22 +164,13 @@ footer {
         margin: 0 5px;
     }
 }
-//Buttons
-button[class^="btn-"] {
-    outline: none;
-    &.disabled {
-        cursor:not-allowed;
-    }
-    &.active {
-        cursor: pointer;
-    }
-}
+
 a {
     color: @primary-color;
     text-decoration: none;
     background-color: transparent;
     transition: all .2s ease;
-    font-size: @body-size;
+    font-size: @tbody-size;
     &:hover {
         color: shade(@primary-color, 60%);
         text-decoration: underline;
@@ -185,7 +178,7 @@ a {
 }
 #switchBP {
     & a {
-        font-size: @small-under-body-text;
+        font-size: @tbody-size-sm;
         text-transform: uppercase;
         letter-spacing: .15em;
         &:hover {
