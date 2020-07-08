@@ -9,26 +9,25 @@
     <meta name="language" content="English">
 
     <link rel="stylesheet" type="text/css" href="styles/index.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Telenor ID - one secure sign in for all services</title>
+
+    <title>Telenor ID - One secure sign in for all services</title>
 </head>
 <body>
-
-<header>
+<header class="hbox flex-wrap">
     <div id="logo">
         <img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png">
     </div>
     <nav id="switchBP">
-        <ul>
-            <li><a href="#">Business</a></li>
+        <ul class="hbox">
+            <li><a href="#" class="active">Business</a></li>
             <li><a href="#">Private</a></li>
         </ul>
     </nav>
-    <nav id="mainNav">
-        <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Privacy & Security</a></li>
+    <nav id="mainNav" class="flex-1">
+        <ul class="hbox">
+            <li><a href="features.html">Features</a></li>
+            <li><a href="privacy.html">Privacy & Security</a></li>
             <li><button class="btn-secondary">Get started</button></li>
         </ul>
     </nav>
@@ -39,7 +38,7 @@
         <h1>Telenor ID</h1>
         <h3>One secure sign-in for all services</h3>
         <p class="text-body">Telenor ID is a B2B provider that leverages from Norway’s leading telecom operator to support businesses, companies and partners with a scalable and easy to integrate sign-in solution.</p>
-        <div>
+        <div class="">
             <button class="btn-primary">Get started</button>
             <button class="btn-secondary">Features</button>
         </div>

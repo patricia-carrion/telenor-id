@@ -46,8 +46,7 @@ table {
     border-spacing: 0;
 }
 
-// Styles
-
+// General text styles
 html {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: @body-size;
@@ -61,50 +60,40 @@ p.text-body {
     }
 }
 
-
-
-h1, h2, h3, h4, h5, h6, p {
-    margin-bottom: .5em;
-}
-
 h1 {
-    font-size: @hero1-text;
+    font-size: @hero-title;
 }
 
 h2 {
-    font-size: @hero2-text;
+    font-size: @x-lg-title;
 
 }
 
 h3 {
-    font-size: @hero3-text;
+    font-size: @lg-title;
 
 }
 
 h4 {
-    font-size: 1.50rem;
+    font-size: @md-title;
 
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: @sm-title;
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: @x-sm-title;
 }
 
-
-
-
+// General styles
 header {
-    background: aquamarine;
-    display: flex;
-    flex-direction: row;
+    background-color: "fff";
 }
 
 #logo {
-    background: cadetblue;
+    background-color: transparent;
     padding: 1em;
     img {
         height: 30px;
@@ -113,30 +102,26 @@ header {
 }
 
 #switchBP {
-    background: transparent;
-    ul {
-        display: flex;
-    }
+    background-color: transparent;
 }
 
 #mainNav {
-    background: cornflowerblue;
-    flex: 1;
+    background-color: transparent;
     ul {
-        display: flex;
         align-content: center;
         justify-content: flex-end;
-        li {
+        li:extend(.hbox, .flex-items-center) {
             padding: 1em;
-            display: flex;
-            align-items: center;
         }
     }
     & a {
         font-size: @body-size;
         text-decoration: none;
-        color: black;
+        color: @secondary-color;
         &:hover {
+            color: @primary-color;
+        }
+        &.active {
             color: @primary-color;
         }
     }
@@ -266,12 +251,62 @@ footer {
 }
 
 header {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    min-height: 100px;
     align-items: center;
 }
+
+// Flexbox
+.dflex {
+    display: flex;
+}
+
+.hbox:extend(.dflex) {
+    flex-direction: row; // items organized horizontally from left to right
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.vbox:extend(.dflex) {
+    flex-direction: column; // items organized vertically from top to bottom
+    &.reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+[class^="flex-"] {
+    max-width: 100%;
+    min-height: 0px !important;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-items-start {
+    align-items: flex-start;
+}
+
+.flex-items-end {
+    align-items: flex-end;
+}
+
+.flex-items-center {
+    align-items: center;
+}
+
 
 
 
