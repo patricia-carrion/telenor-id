@@ -45,53 +45,40 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 // General text styles
 html {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: @body-size;
     font-weight: 400;
 }
-
 p.text-body {
     font-weight: 300;
     &.small {
         font-size: @small-under-body-text;
     }
 }
-
 h1 {
     font-size: @hero-title;
 }
-
 h2 {
     font-size: @x-lg-title;
-
 }
-
 h3 {
     font-size: @lg-title;
-
 }
-
 h4 {
     font-size: @md-title;
-
 }
-
 h5 {
     font-size: @sm-title;
 }
-
 h6 {
     font-size: @x-sm-title;
 }
-
 // General styles
 header {
     background-color: "fff";
 }
-
 #logo {
     background-color: transparent;
     padding: 1em;
@@ -100,11 +87,9 @@ header {
         width: auto;
     }
 }
-
 #switchBP {
     background-color: transparent;
 }
-
 #mainNav {
     background-color: transparent;
     ul {
@@ -126,12 +111,10 @@ header {
         }
     }
 }
-
-
 .CTA {
     background: chocolate;
     display: flex;
-    height: 300px;
+    min-height: 300px;
     .CTA-text {
         flex: 2;
         background: bisque;
@@ -143,13 +126,11 @@ header {
         overflow: hidden;
     }
 }
-
 footer {
     background: blueviolet;
     display: flex;
     flex-direction: row;
 }
-
 .foot1 {
     background: cadetblue;
     flex:2;
@@ -158,19 +139,15 @@ footer {
     #logo2 {
         flex: 2;
     }
-
 }
-
 .foot2 {
     background: aquamarine;
     flex: 1;
 }
-
 .foot3 {
     background: darkgoldenrod;
     flex:1;
 }
-
 .allApps {
     display: flex;
     flex-direction: row;
@@ -184,11 +161,8 @@ footer {
         width: 50px;
         margin: 0 5px;
     }
-
 }
-
 //Buttons
-
 button[class^="btn-"] {
     outline: none;
     &.disabled {
@@ -198,31 +172,25 @@ button[class^="btn-"] {
         cursor: pointer;
     }
 }
-
 a {
     color: @primary-color;
     text-decoration: none;
     background-color: transparent;
     transition: all .2s ease;
     font-size: @body-size;
-
     &:hover {
         color: shade(@primary-color, 60%);
         text-decoration: underline;
-
     }
 }
-
 #switchBP {
     & a {
         font-size: @small-under-body-text;
         text-transform: uppercase;
         letter-spacing: .15em;
-
         &:hover {
             text-decoration: none;
         }
-
     }
     & ul li {
         padding: 1em;
@@ -232,8 +200,6 @@ a {
         }
     }
 }
-
-
 footer {
     color: #fff;
     & a {
@@ -249,72 +215,70 @@ footer {
         font-weight: 500;
     }
 }
-
 header {
     min-height: 100px;
     align-items: center;
 }
-
 // Flexbox
 .dflex {
     display: flex;
 }
-
 .hbox:extend(.dflex) {
     flex-direction: row; // items organized horizontally from left to right
     &.reverse {
         flex-direction: row-reverse;
     }
 }
-
 .vbox:extend(.dflex) {
     flex-direction: column; // items organized vertically from top to bottom
     &.reverse {
         flex-direction: column-reverse;
     }
 }
-
 [class^="flex-"] {
     max-width: 100%;
     min-height: 0px !important;
 }
-
 .flex-1 {
     flex: 1;
 }
-
 .flex-2 {
     flex: 2;
 }
-
 .flex-3 {
     flex: 3;
 }
-
 .flex-wrap {
     flex-wrap: wrap;
 }
-
 .flex-items-start {
     align-items: flex-start;
 }
-
 .flex-items-end {
     align-items: flex-end;
 }
-
 .flex-items-center {
     align-items: center;
 }
 
+//Vertical spacing
 
+.mb10 {
+    margin-bottom: 10px;
+}
 
+.mb30 {
+    margin-bottom: 30px;
+}
 
+.mb50 {
+    margin-bottom: 50px;
+}
 
+.mb100{
+    margin-bottom: 100px;
+}
 
-
-
-
-
-
-
+mb150 {
+    margin-bottom: 150px;
+}
