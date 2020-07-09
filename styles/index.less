@@ -81,13 +81,22 @@ h6 {
     font-size: @x-sm-title;
 }
 
-#features-image {
-    background-image: url("../img/features.png");
+
+
+.header-image {
+    &#features-image {
+        background-image: url("../img/features.png");
+    }
+    &#privSec-image {
+        background-image: url("../img/privacy.png");
+    }
     width: 100%;
     height: 600px;
     background-size: cover;
     overflow: hidden;
     background-position-y: center;
+
+
 }
 
 footer {
@@ -158,6 +167,7 @@ a {
 }
 
 .get-started-bottom {
+
     background-color: gainsboro;
     padding: 30px;
     text-align: center;
@@ -165,6 +175,15 @@ a {
         font-weight: 500;
     }
 
+}
+
+.illustrations {
+    display: flex;
+    flex-direction: row;
+}
+
+.illustration {
+    flex: 1;
 }
 
 // Flexbox
