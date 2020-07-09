@@ -53,9 +53,12 @@ html {
 }
 
 p.tbody {
-    font-weight: 300;
+    font-size: @tbody-size;
+    line-height: calc(@tbody-size + 30%);
+    font-weight: @tlight;
     &.small {
         font-size: @tbody-size-sm;
+        line-height: calc(@tbody-size-sm + 30%);
     }
 }
 
@@ -76,63 +79,6 @@ h5 {
 }
 h6 {
     font-size: @x-sm-title;
-}
-// General styles
-header {
-    background-color: "fff";
-}
-#logo {
-    background-color: transparent;
-    padding: 1em;
-    img {
-        height: 30px;
-        width: auto;
-    }
-}
-#switchBP {
-    background-color: transparent;
-}
-#mainNav {
-    background-color: transparent;
-    ul {
-        align-content: center;
-        justify-content: flex-end;
-        li:extend(.hbox, .flex-items-center) {
-            padding: 1em;
-        }
-    }
-    & a {
-        font-size: @tbody-size;
-        text-decoration: none;
-        color: @secondary-color;
-        &:hover {
-            color: @primary-color;
-        }
-        &.active {
-            color: @primary-color;
-        }
-    }
-}
-.CTA {
-    background: chocolate;
-    display: flex;
-    min-height: 300px;
-    .CTA-text {
-        flex: 2;
-        background: bisque;
-    }
-    .CTA-image {
-        flex: 1;
-        background-image: url("../img/image2.png");
-        background-size: cover;
-        overflow: hidden;
-    }
-}
-
-.CTA-img {
-    background-image: url("../img/image2.png");
-    background-size: cover;
-    overflow: hidden;
 }
 
 footer {
@@ -194,73 +140,6 @@ a {
         text-decoration: underline;
     }
 }
-#switchBP {
-    & a {
-        font-size: @tbody-size-sm;
-        text-transform: uppercase;
-        letter-spacing: .15em;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    & ul li {
-        padding: 1em;
-        border: 1px solid transparent;
-        &:hover {
-            border-bottom-color: red;
-        }
-    }
-}
-
-header {
-    min-height: 100px;
-    align-items: center;
-}
-
-// Objects
-// Wrapping and constraining elements
-.container {
-    position: relative;
-    width: 100%;
-    margin: 0px auto;
-}
-
-.page-wrapper {
-    width: 100%;
-    transition: all .25s ease;
-    margin: 0px auto;
-}
-
-.main-content {
-    flex: 1 1 auto;
-    min-height: 0px;
-    overflow-y: auto;
-}
-
-// Media queries
-@media (min-width: 576px) {
-    .page-wrapper {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .page-wrapper {
-        max-width: 95%;
-    }
-}
-
-@media (min-width: 992px) {
-    .page-wrapper {
-        max-width: 85%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .page-wrapper {
-        max-width: 75%;
-    }
-}
 
 // Flexbox
 .dflex {
@@ -298,6 +177,34 @@ header {
     flex: 3;
 }
 
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.flex-9 {
+    flex: 9;
+}
+
+.flex-10 {
+    flex: 10;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -314,7 +221,7 @@ header {
     align-items: center;
 }
 
-//Vertical spacing
+// Vertical spacing
 
 .mb10 {
     margin-bottom: 10px;
@@ -336,3 +243,83 @@ mb150 {
     margin-bottom: 150px;
 }
 
+// Header
+header {
+    background-color: "fff";
+}
+
+.header-container:extend(.hbox, .flex-wrap) {
+    .header-elements:extend(.hbox, .flex-wrap, .flex-items-center) {
+    }
+}
+
+#logo {
+    background-color: transparent;
+    img {
+        height: 30px;
+        width: auto;
+    }
+}
+
+// Header – Navigation
+#switchBP {
+    background-color: transparent;
+    & ul li {
+        padding: .5em .25em;
+        border: 1px solid transparent;
+        &:hover {
+            border-bottom-color: @primary-color;
+        }
+        &.active {
+            border-bottom-color: @primary-color;
+        }
+    }
+    & a {
+        font-size: @tbody-size-x-sm;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-weight: @tlight;
+        color: tint(@secondary-color, 60%);
+        &:hover {
+            font-weight: @tregular;
+            text-decoration: none;
+            color: @secondary-color;
+        }
+        &.active {
+            font-weight: @tregular;
+            color: @secondary-color;
+            text-decoration: none;
+        }
+    }
+}
+
+#mainNav {
+    background-color: transparent;
+    ul {
+        align-content: center;
+        justify-content: flex-end;
+        li:extend(.hbox, .flex-items-center) {
+            padding: 1em;
+        }
+    }
+    & a {
+        font-size: @tbody-size;
+        text-decoration: none;
+        color: @secondary-color;
+        &:hover {
+            color: @primary-color;
+        }
+        &.active {
+            color: @primary-color;
+        }
+    }
+}
+
+// CTA
+.CTA-container:extend(.hbox, .flex-wrap) {
+    .CTA-img {
+        background-image: url("../img/home.png");
+        background-size: cover;
+        overflow: hidden;
+    }
+}
