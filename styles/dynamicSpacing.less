@@ -1,0 +1,63 @@
+@import "variables.less";
+
+// This set of mixins allows you to create margin and padding classes dynamically.
+
+// In HTML, you would specify <div class="mr20-xs">Content</div> to give you margin-right: 20px
+// It is based on the responsive capabilities of Bootstrap. <div class="mr20-sm"> would give you
+// 20 pixels of right margin on screens small and larger.
+
+// Mixin control
+
+// .make-margins(@breakpoint, @size, @decrement)
+//        @breakpoint: To be used with Bootstrap. Must supply breakpoints: xs, sm, md or lg
+//        @size: Largest size of margin you desire. Default is 50
+//        @decrement: Amount @size is decremented on each loop. Default is 10
+
+// .make-paddings uses the same parameters
+
+
+// Margins
+
+.make-margins(@breakpoint, @size: 5, @decrement: 1) when (@size >= 0) {
+    .make-margins(@breakpoint, @size - @decrement);
+
+    @size-rem: ~"@{size}rem";
+
+    .m@{size}-@{breakpoint} {
+        margin: @size-rem;
+    }
+    .mt@{size}-@{breakpoint} {
+        margin-top: @size-rem;
+    }
+    .mr@{size}-@{breakpoint} {
+        margin-right: @size-rem;
+    }
+    .mb@{size}-@{breakpoint} {
+        margin-bottom: @size-rem;
+    }
+    .ml@{size}-@{breakpoint} {
+        margin-left: @size-rem;
+    }
+}
+
+.make-margins(xs);
+
+@media (max-width: @screen-x-sm-max) {
+    .make-margins(xs);
+}
+
+@media (min-width: @screen-sm-min) {
+    .make-margins(sm);
+}
+
+@media (min-width: @screen-md-min) {
+    .make-margins(md);
+}
+
+@media (min-width: @screen-lg-min) {
+    .make-margins(lg);
+}
+
+@media (min-width: @screen-x-lg-min) {
+    .make-margins(xl);
+}

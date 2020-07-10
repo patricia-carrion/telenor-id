@@ -75,3 +75,14 @@ button[class^="btn-"] {
     line-height: 1rem;
     padding: .25rem .5rem;
 }
+
+// Tabs
+.tabs-dropdown {
+    & button.tab:extend(.mb1-md),
+    & button.tab:extend(.btn-base){
+        background-color: @lightgray;
+        color: @primary-color;
+        text-align: left;
+        width: 100%;
+    }
+}
