@@ -56,15 +56,23 @@ html {
     font-weight: @f-regular;
 }
 
+p.t-body, p.t-body-sm, p.t-body-xs,
+span.t-body, span.t-body-sm, span.t-body-xs {
+    font-weight: @f-light;
+}
+
 p.t-body,
 span.t-body {
     font-size: @t-body;
     line-height: calc(@t-body + 30%);
-    font-weight: @f-light;
-    &.small {
+    &-sm {
         font-size: @t-body-sm;
         line-height: calc(@t-body-sm + 30%);
     }
+    &-xs {
+        font-size: @t-body-xs;
+        line-height: calc(@t-body-xs + 30%);
+        }
 }
 
 // Font weight
@@ -128,7 +136,10 @@ h6, .h6 {
 
 // Header
 header {
+    position: sticky;
+    top: 0;
     background-color: #fff;
+    box-shadow: .05em .05em .05em @lightgray;
 }
 
 .header-container:extend(.hbox, .flex-wrap) {
@@ -164,7 +175,7 @@ header {
         }
     }
     & a {
-        font-size: @t-body-xm;
+        font-size: @t-body-xs;
         text-transform: uppercase;
         letter-spacing: .1em;
         font-weight: @f-light;
@@ -208,7 +219,8 @@ header {
 // Page headers
 .header-img {
     width: 100%;
-    height: 600px;
+    min-height: 400px;
+    max-height: 50vh;
     background-size: cover;
     overflow: hidden;
     background-position-y: center;
@@ -228,9 +240,12 @@ header {
 #p-content-wrapper:extend(.hbox) {
     & .p-quick-access {
         position: sticky;
-        top: 0;
-        padding-left: 2em;
+        top: 100px;
+        text-align: right;
+        & ul li:extend(.mb05) {
+        }
         & a {
+            font-size: @t-body-sm;
             color: @secondary-color;
             &:hover, &.active {
                 color: @primary-color;
@@ -290,23 +305,55 @@ footer {
     flex: 1;
 }
 
-.mb05 {
-    margin-bottom: 0.5rem;
-
+// Margins
+// Dynamic margins in dynamicSpacing.less
+.m05 {
+  margin: .5rem;
 }
-
 .mt05 {
-    margin-top: 0.5rem;
-
+  margin-top: .5rem;
 }
-
-.ml05 {
-    margin-left: 0.5rem;
-
-}
-
 .mr05 {
-    margin-left: 0.5rem;
+  margin-right: .5rem;
+}
+.mb05 {
+  margin-bottom: .5rem;
+}
+.ml05 {
+  margin-left: .5rem;
+}
+.mx05 {
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+.my05 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
+// Paddings
+// Dynamic paddings in dynamicSpacing.less
+.p05 {
+  padding: .5rem;
+}
+.pt05 {
+  padding-top: .5rem;
+}
+.pr05 {
+  padding-right: .5rem;
+}
+.pb05 {
+  padding-bottom: .5rem;
+}
+.pl05 {
+  padding-left: .5rem;
+}
+.px05 {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+.py05 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
 
