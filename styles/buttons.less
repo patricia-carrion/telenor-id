@@ -13,9 +13,9 @@ button[class^="btn-"] {
 .btn-base {
     border-radius: .25rem;
     border: 1px solid transparent;
-    font-size: .85rem;
-    line-height: 1.25rem;
-    padding: .75rem 1.5rem;
+    font-size: @t-body-sm;
+    line-height: calc(@t-body-sm + 30%);
+    padding: .85rem 1.75rem;
     cursor: pointer;
     text-align: center;
     transition: all .2s ease;
@@ -71,9 +71,9 @@ button[class^="btn-"] {
 // Small button
 // Add .btn-small to Primary or Secondary buttons
 .btn-small:extend(.btn-base) {
-    font-size: .5rem;
-    line-height: 1rem;
-    padding: .25rem .5rem;
+    font-size: @t-body-sm;
+    line-height: calc(@t-body-sm + 30%);
+    padding: .55rem 1.45rem;
 }
 
 // Tabs
