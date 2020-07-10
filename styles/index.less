@@ -52,6 +52,7 @@ table {
 html {
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: @t-body;
+    line-height: calc(@t-body + 30%);
     font-weight: @f-regular;
 }
 
@@ -86,6 +87,8 @@ a {
     text-decoration: none;
     background-color: transparent;
     transition: all .2s ease;
+    font-size: @t-body;
+    line-height: calc(@t-body + 30%);
     &:hover {
         color: shade(@primary-color, 60%);
         text-decoration: none;
@@ -145,37 +148,40 @@ header {
 // Header – Navigation
 #switchBP {
     background-color: transparent;
+    text-align: center;
     & ul li {
-        padding: .5em .25em;
+        padding: .25em;
         border: 1px solid transparent;
         &:hover {
             border-bottom-color: @primary-color;
+            & a {
+                font-weight: @f-regular;
+                color: @secondary-color;
+                text-decoration: none;
+            }
         }
         &.active {
             border-bottom-color: @primary-color;
+            & a {
+                font-size: @t-body-xm;
+                font-weight: @f-regular;
+                color: @secondary-color;
+                text-decoration: none;
+            }
         }
     }
     & a {
         font-size: @t-body-xm;
         text-transform: uppercase;
-        letter-spacing: .15em;
+        letter-spacing: .1em;
         font-weight: @f-light;
         color: tint(@secondary-color, 60%);
-        &:hover {
-            font-weight: @f-regular;
-            text-decoration: none;
-            color: @secondary-color;
-        }
-        &.active {
-            font-weight: @f-regular;
-            color: @secondary-color;
-            text-decoration: none;
-        }
     }
 }
 
 #mainNav {
     background-color: transparent;
+    text-align: center;
     ul {
         align-content: center;
         justify-content: flex-end;

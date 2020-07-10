@@ -18,7 +18,7 @@
 
 // Margins
 
-.make-margins(@breakpoint, @size: 5, @decrement: 1) when (@size >= 0) {
+.make-margins(@breakpoint: xs, @size: 5, @decrement: 1) when (@size >= 0) {
     .make-margins(@breakpoint, @size - @decrement);
 
     @size-rem: ~"@{size}rem";
