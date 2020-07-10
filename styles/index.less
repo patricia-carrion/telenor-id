@@ -1,6 +1,7 @@
 @import "variables.less";
 @import "flexbox.less";
 @import "buttons.less";
+@import "inputs.less";
 @import "dynamicSpacing.less";
 
 // Reset CSS
@@ -50,7 +51,7 @@ table {
 
 // General text
 html {
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: @f-family;
     font-size: @t-body;
     line-height: calc(@t-body + 30%);
     font-weight: @f-regular;
@@ -144,16 +145,26 @@ header {
 
 .header-container:extend(.hbox, .flex-wrap) {
     .header-elements:extend(.hbox, .flex-wrap, .f-ai-center) {
-        margin: 1em 0;
     }
 }
 
 #logo,
 #logo-compact {
     background-color: transparent;
-    img {
-        height: 2rem;
+    & img {
         width: auto;
+    }
+}
+
+#logo {
+    & img {
+        height: 30px;
+    }
+}
+
+#logo-compact {
+    & img {
+        height: 50px;
     }
 }
 
@@ -161,16 +172,26 @@ header {
 #switchBP {
     background-color: transparent;
     text-align: center;
-    & ul li {
-        padding: .25em;
-        border: 1px solid transparent;
-        &:hover,
-        &.active {
-            border-bottom-color: @primary-color;
-            & a {
-                font-weight: @f-medium;
-                color: @secondary-color;
-                text-decoration: none;
+    & ul {
+        justify-content: center;
+        & li {
+            margin: 0 .5em;
+            padding: .25em;
+            border: 1px solid transparent;
+            &:hover,
+            &.active {
+                border-bottom-color: @primary-color;
+                & a {
+                    font-weight: @f-medium;
+                    color: @secondary-color;
+                    text-decoration: none;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
@@ -191,12 +212,19 @@ header {
         justify-content: flex-end;
         li:extend(.hbox, .f-ai-center) {
             padding: 0 1.5em;
+        &:first-child {
+            padding-left: 0;
+            }
+        &:last-child {
+            padding-right: 0;
+            }
         }
     }
     & a {
         font-size: @t-body;
         text-decoration: none;
         color: @secondary-color;
+        white-space: nowrap;
         &:hover {
             color: @primary-color;
         }
@@ -240,7 +268,7 @@ header {
 #p-content-wrapper:extend(.hbox) {
     & .p-quick-access {
         position: sticky;
-        top: 100px;
+        top: 150px;
         text-align: right;
         & ul li:extend(.mb05) {
         }
@@ -252,6 +280,10 @@ header {
             }
         }
     }
+}
+
+.p-section {
+    scroll-margin-top: calc(150px + 0.5rem);
 }
 
 .CTA-getStarted {
@@ -356,4 +388,3 @@ footer {
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
-
