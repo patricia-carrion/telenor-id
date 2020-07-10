@@ -86,7 +86,7 @@ a {
     color: @primary-color;
     text-decoration: none;
     background-color: transparent;
-    transition: all .2s ease;
+    transition: all .1s ease;
     font-size: @t-body;
     line-height: calc(@t-body + 30%);
     &:hover {
@@ -133,6 +133,7 @@ header {
 
 .header-container:extend(.hbox, .flex-wrap) {
     .header-elements:extend(.hbox, .flex-wrap, .f-ai-center) {
+        margin: 1em 0;
     }
 }
 
@@ -152,19 +153,11 @@ header {
     & ul li {
         padding: .25em;
         border: 1px solid transparent;
-        &:hover {
-            border-bottom-color: @primary-color;
-            & a {
-                font-weight: @f-regular;
-                color: @secondary-color;
-                text-decoration: none;
-            }
-        }
+        &:hover,
         &.active {
             border-bottom-color: @primary-color;
             & a {
-                font-size: @t-body-xm;
-                font-weight: @f-regular;
+                font-weight: @f-medium;
                 color: @secondary-color;
                 text-decoration: none;
             }
@@ -186,7 +179,7 @@ header {
         align-content: center;
         justify-content: flex-end;
         li:extend(.hbox, .f-ai-center) {
-            padding: 1em;
+            padding: 0 1.5em;
         }
     }
     & a {
