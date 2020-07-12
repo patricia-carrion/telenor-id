@@ -16,7 +16,7 @@ button[class^="btn-"] {
     border: 1px solid transparent;
     font-size: @t-body-sm;
     line-height: calc(@t-body-sm + 30%);
-    padding: .85rem 1.75rem;
+    padding: 1.25rem 1.75rem;
     cursor: pointer;
     text-align: center;
     transition: all .2s ease;
@@ -69,12 +69,34 @@ button[class^="btn-"] {
     }
 }
 
+// Ghost button
+.btn-ghost:extend(.btn-base) {
+    font-size: @t-body;
+    border-color: transparent;
+    background-color: transparent;
+    color: @primary-color;
+    &:disabled {
+        color: tint(@primary-color, 60%);
+    }
+    &.active {
+        background-color: tint(@primary-color, 80%);
+        color: shade(@primary-color, 60%);
+        text-decoration: underline;
+    }
+    &:hover:enabled,
+    &.active:hover:enabled {
+        box-shadow: none;
+        color: shade(@primary-color, 60%);
+        text-decoration: underline;
+    }
+}
+
 // Small button
 // Add .btn-small to Primary or Secondary buttons
 .btn-small:extend(.btn-base) {
     font-size: @t-body-sm;
     line-height: calc(@t-body-sm + 30%);
-    padding: .55rem 1.45rem;
+    padding: 1rem 1.5rem;
 }
 
 // Tabs
