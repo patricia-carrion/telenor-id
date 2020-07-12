@@ -135,12 +135,18 @@ h6, .h6 {
     min-height: 100vh;
 }
 
+.content-box {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 // Header
 header {
     position: sticky;
     top: 0;
     background-color: #fff;
-    box-shadow: .05em .05em .05em @lightgray;
+    // box-shadow: .05em .05em .05em @lightgray;
 }
 
 .header-container:extend(.hbox, .flex-wrap) {
@@ -241,7 +247,11 @@ header {
             background-image: url("../img/home.png");
             background-size: cover;
             overflow: hidden;
+            background-position-x: center;
         }
+    & .CTA-buttons {
+        max-width: 300px;
+    }
 }
 
 // Page headers
@@ -258,6 +268,9 @@ header {
     &#privacy-img {
         background-image: url("../img/privacy.png");
     }
+    &#getStarted-img {
+        background-image: url("../img/getStarted.png");
+    }
 }
 
 // Page content
@@ -265,7 +278,7 @@ header {
     text-align: center;
 }
 
-#p-content-wrapper:extend(.hbox) {
+.p-content-wrapper:extend(.hbox) {
     & .p-quick-access {
         position: sticky;
         top: 150px;
@@ -340,51 +353,71 @@ footer {
 // Margins
 // Dynamic margins in dynamicSpacing.less
 .m05 {
-  margin: .5rem;
-}
+    margin: .5rem;
+    }
 .mt05 {
-  margin-top: .5rem;
-}
+    margin-top: .5rem;
+    }
 .mr05 {
-  margin-right: .5rem;
-}
+    margin-right: .5rem;
+    }
 .mb05 {
-  margin-bottom: .5rem;
-}
+    margin-bottom: .5rem;
+    }
 .ml05 {
-  margin-left: .5rem;
-}
+    margin-left: .5rem;
+    }
 .mx05 {
-  margin-right: .5rem;
-  margin-left: .5rem;
-}
+    margin-right: .5rem;
+    margin-left: .5rem;
+    }
 .my05 {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    }
 
 // Paddings
 // Dynamic paddings in dynamicSpacing.less
 .p05 {
-  padding: .5rem;
-}
+    padding: .5rem;
+    }
 .pt05 {
-  padding-top: .5rem;
-}
+    padding-top: .5rem;
+    }
 .pr05 {
-  padding-right: .5rem;
-}
+    padding-right: .5rem;
+    }
 .pb05 {
-  padding-bottom: .5rem;
-}
+    padding-bottom: .5rem;
+    }
 .pl05 {
-  padding-left: .5rem;
-}
+    padding-left: .5rem;
+    }
 .px05 {
-  padding-right: .5rem;
-  padding-left: .5rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
 }
 .py05 {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    }
+
+
+
+.items-container {
+    &:extend(.hbox, .flex-wrap);
+    justify-content: center;
+    }
+
+.partner-logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: transparent;
+    overflow: hidden;
+    height: 30px;
+    width: 100px;
+    &#partnerTelenor {
+        background-image: url("../img/logo.png");
+        }
+    }
