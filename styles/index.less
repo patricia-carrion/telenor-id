@@ -55,7 +55,7 @@ table {
 html {
     font-family: @f-family;
     font-size: @t-body;
-    line-height: calc(@t-body + 30%);
+    line-height: calc(@t-body + 50%);
     font-weight: @f-regular;
     }
 
@@ -67,14 +67,14 @@ span.t-body, span.t-body-sm, span.t-body-xs {
 p.t-body,
 span.t-body {
     font-size: @t-body;
-    line-height: calc(@t-body + 30%);
+    line-height: calc(@t-body + 50%);
     &-sm {
         font-size: @t-body-sm;
-        line-height: calc(@t-body-sm + 30%);
+        line-height: calc(@t-body-sm + 50%);
         }
     &-xs {
         font-size: @t-body-xs;
-        line-height: calc(@t-body-xs + 30%);
+        line-height: calc(@t-body-xs + 50%);
         }
     }
 
@@ -360,45 +360,6 @@ header {
 
     }
 
-
-#contact-picture {
-    background-image: url("../img/features.png");
-
-}
-
-.started-picture {
-    height: 40px;
-    width: 40px;
-
-}
-
-.border-start {
-    border-radius: 15px;
-    border: 1px solid lightgrey;
-    padding: 4rem;
-}
-
-.icons-title {
-    display: flex;
-    flex-direction: row;
-    padding-right: 1rem;
-
-    & .started-picture {
-        flex: 1;
-    }
-
-    & .step-text {
-        flex: 3;
-    }
-}
-
-
-label {
-    font-family: 'Telenor', 'Roboto', 'Arial', sans-serif;
-}
-
-
-
 li.app-logo {
     margin: 0 .25em;
     &:first-child {
@@ -529,3 +490,58 @@ footer {
     padding-top: .5rem;
     padding-bottom: .5rem;
     }
+
+
+
+
+#contact-picture {
+    background-image: url("../img/features.png");
+
+}
+
+.started-picture {
+    height: 40px;
+    width: 40px;
+
+}
+
+.card-container {
+    border-radius: .25rem;
+    border: 1px solid @gray;
+    padding: 2rem;
+    & .card-title {
+        color: @primary-color;
+        }
+    }
+
+.icon-lg {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 180px;
+    width: 180px;
+    &#contactUsImg {
+        background-image: url("../img/contact.png");
+        }
+    &#planningImg {
+        background-image: url("../img/planning.png");
+        }
+    &#launchImg {
+        background-image: url("../img/launch.png");
+        }
+    }
+
+.icons-title {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1rem;
+
+    & .started-picture {
+        flex: 1;
+    }
+
+    & .step-text {
+        flex: 3;
+    }
+}
+
