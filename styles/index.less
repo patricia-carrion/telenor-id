@@ -150,6 +150,58 @@ h6, .h6 {
     word-break: break-all !important;
     }
 
+// Margins
+// Dynamic margins in dynamicSpacing.less
+.m05 {
+    margin: .5rem;
+    }
+.mt05 {
+    margin-top: .5rem;
+    }
+.mr05 {
+    margin-right: .5rem;
+    }
+.mb05 {
+    margin-bottom: .5rem;
+    }
+.ml05 {
+    margin-left: .5rem;
+    }
+.mx05 {
+    margin-right: .5rem;
+    margin-left: .5rem;
+    }
+.my05 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    }
+
+// Paddings
+// Dynamic paddings in dynamicSpacing.less
+.p05 {
+    padding: .5rem;
+    }
+.pt05 {
+    padding-top: .5rem;
+    }
+.pr05 {
+    padding-right: .5rem;
+    }
+.pb05 {
+    padding-bottom: .5rem;
+    }
+.pl05 {
+    padding-left: .5rem;
+    }
+.px05 {
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+.py05 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    }
+
 // Divider
 hr {
     box-sizing: content-box;
@@ -184,37 +236,86 @@ header {
     width: 100%;
     .header-elements:extend(.hbox, .flex-wrap, .f-ai-center) {
         width: 100%;
-    }
+        }
     }
 
-@media (max-width: @screen-sm-min) {
+.header-desktop {
+    width: inherit;
+    & .header-elements:extend(.hbox, .flex-wrap, .f-ai-center) {
+        .mainNav {
+            ul {
+                align-content: center;
+                justify-content: flex-end;
+                li:extend(.hbox, .f-ai-center) {
+                    padding: 0 1.5em;
+                    &:first-child {
+                        padding-left: 0;
+                        }
+                    &:last-child {
+                        padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.header-mobile {
+    width: 100%;
+    display: none;
+    & .header-elements:extend(.vbox, .f-ai-center) {
+        & .switchBP {
+            background-color: @lightgray1;
+            width: inherit;
+            }
+        }
+        & .mainNav:extend(.vbox) {
+            width: inherit;
+            }
+        & .mobile-menu:extend(.hbox) {
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1rem 1rem 2rem;
+            }
+        & ul.mobile-menu-items {
+            text-align: left;
+            & li {
+                border: 1px solid transparent;
+                border-bottom-color: @lightgray2;
+                padding: 1rem 2rem;
+                &:first-child {
+                    border-top-color: @lightgray2;
+                    }
+                }
+            }
+        }
+
+@media (max-width: @screen-lg-min) {
     .header-desktop {
         display: none;
-    }
+        }
+    .header-mobile {
+        display: block;
+        }
 }
 
-#logo,
-#logo-compact {
+.header-logo,
+.footer-logo {
     background-color: transparent;
     & img {
         width: auto;
         }
     }
-
-#logo {
-    & img {
-        height: 30px;
-        }
-    }
-
-#logo-compact {
+.header-desktop .header-logo img { height: 30px; }
+.header-mobile .header-logo img { height: 25px; }
+.footer-logo {
     & img {
         height: 50px;
         }
     }
 
 // Header – Navigation
-#switchBP {
+.switchBP {
     background-color: transparent;
     text-align: center;
     & a {
@@ -232,7 +333,7 @@ header {
             border: 1px solid transparent;
             &:hover,
             &.active {
-                border-bottom-color: @primary-color;
+                border-bottom-color: @link-color;
                 & a {
                     font-weight: @f-medium;
                     color: @text-black;
@@ -249,135 +350,22 @@ header {
         }
     }
 
-#mainNav {
+.mainNav {
     background-color: transparent;
     text-align: center;
-    ul {
-        align-content: center;
-        justify-content: flex-end;
-        li:extend(.hbox, .f-ai-center) {
-            padding: 0 1.5em;
-            &:first-child {
-                padding-left: 0;
-                }
-            &:last-child {
-                padding-right: 0;
-                }
-            }
-        }
     & a {
         font-size: @t-body;
         text-decoration: none;
         color: @text-black;
         white-space: nowrap;
         &:hover {
-            color: @primary-color;
+            color: @link-color;
             }
         &.active {
-            color: @primary-color;
+            color: @link-color;
             }
         }
     }
-
-.mobile-header {
-    display: flex;
-    flex-direction: column;
-    width: inherit;
-
-    & #switchBP-mobile {
-        flex: 1;
-        //background-color: #9c9c9c;
-        text-align: center;
-
-        & ul {
-            justify-content: center;
-            display: flex;
-            flex-direction: row;
-
-            & li {
-                margin: 0 .5em;
-                padding: .25em;
-                border: 1px solid transparent;
-
-                &:hover,
-                &.active {
-                    border-bottom-color: @primary-color;
-
-                    & a {
-                        font-weight: @f-medium;
-                        color: @secondary-color;
-                        text-decoration: none;
-                    }
-                }
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-
-        & a {
-            font-size: @t-body-xs;
-            text-transform: uppercase;
-            letter-spacing: .1em;
-            font-weight: @f-light;
-            color: tint(@secondary-color, 60%);
-        }
-    }
-}
-
-
-    & #logo-plus-hamburger {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: .8rem;
-        padding-top: .8rem;
-
-        & #logo-mobile {
-            & img {
-                height: 1.5rem;
-                padding-left: 1rem;
-            }
-
-        }
-
-        & #hamburger-menu {
-            flex: 1;
-            text-align: right;
-            & img {
-                height: 1.5rem;
-                padding-right: 1rem;
-            }
-
-        }
-
-    }
-
-    .mobile-menu {
-        & ul {
-            & li {
-                border-bottom: 1px solid lightgrey;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                padding-left: 1rem;
-            }
-            &:first-child {
-                border-top: 1px solid lightgrey;
-            }
-        }
-        & a {
-            color: black;
-            font-size: 16px;
-        }
-    }
-
-
-
 
 // CTA
 .CTA-container:extend(.hbox, .flex-wrap) {
@@ -401,22 +389,18 @@ header {
     background-size: cover;
     overflow: hidden;
     background-position-y: center;
-    &#features-img {
+    &#featuresImg {
         background-image: url("../img/features.png");
         }
-    &#privacy-img {
+    &#privacyImg {
         background-image: url("../img/privacy.png");
         }
-    &#getStarted-img {
+    &#getStartedImg {
         background-image: url("../img/getStarted.png");
         }
     }
 
 // Page content
-#p-overall-info {
-    text-align: center;
-    }
-
 .p-content-wrapper:extend(.hbox) {
     & .p-quick-access {
         position: sticky;
@@ -549,87 +533,18 @@ footer {
     }
     }
 
-.column1 {
+.footer-column1 {
+    min-width: 300px;
+    }
+
+.footer-column2:extend(.hbox) {
+}
+
+.footer-sm-column {
     min-width: 200px;
-
 }
 
-.column2 {
-    display: flex;
-    flex-direction: row;
-}
-
-.about {
-    min-width: 50px;
-}
-
-
-
-// Margins
-// Dynamic margins in dynamicSpacing.less
-.m05 {
-    margin: .5rem;
-    }
-.mt05 {
-    margin-top: .5rem;
-    }
-.mr05 {
-    margin-right: .5rem;
-    }
-.mb05 {
-    margin-bottom: .5rem;
-    }
-.ml05 {
-    margin-left: .5rem;
-    }
-.mx05 {
-    margin-right: .5rem;
-    margin-left: .5rem;
-    }
-.my05 {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    }
-
-// Paddings
-// Dynamic paddings in dynamicSpacing.less
-.p05 {
-    padding: .5rem;
-    }
-.pt05 {
-    padding-top: .5rem;
-    }
-.pr05 {
-    padding-right: .5rem;
-    }
-.pb05 {
-    padding-bottom: .5rem;
-    }
-.pl05 {
-    padding-left: .5rem;
-    }
-.px05 {
-    padding-right: .5rem;
-    padding-left: .5rem;
-}
-.py05 {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    }
-
-
-
-
-#contact-picture {
-    background-image: url("../img/features.png");
-
-}
-
-.started-picture {
-    height: 40px;
-    width: 40px;
-
-}
+// Cards
 ul.list-cards {
     & li {
         margin: 2em 0;
@@ -667,19 +582,5 @@ ul.list-cards {
         background-image: url("../img/launch.png");
         }
     }
-
-.icons-title {
-    display: flex;
-    flex-direction: row;
-    padding-right: 1rem;
-
-    & .started-picture {
-        flex: 1;
-    }
-
-    & .step-text {
-        flex: 3;
-    }
-}
 
 

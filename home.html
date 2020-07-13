@@ -21,55 +21,50 @@
         <header class="header-container">
             <div class="header-desktop content-box py1-xs py2-md px2-xs px4-lg">
                 <div class="header-elements flex-10">
-                    <div id="logo">
+                    <div class="header-logo">
                         <a href="home.html"><img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png"></a>
                     </div>
-                    <nav id="switchBP" class="mx2-xs">
+                    <nav class="switchBP mx2-xs">
                         <ul class="hbox">
                             <li class="active"><a href="#">Business</a></li>
                             <li><a href="#">Private</a></li>
                         </ul>
                     </nav>
-                    <nav id="mainNav" class="flex-1">
+                    <nav class="mainNav flex-1">
                         <ul class="hbox">
                             <li><a href="features.html">Features</a></li>
-                            <li><a href="privacy.html">Privacy & Security</a></li>
+                            <li><a href="privacy.html">Privacy and security</a></li>
                             <li><button type="button" class="btn-secondary btn-small" onclick="location.href='getStarted.html'">Get started</button></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-
-            <div class="mobile-header">
-                <div id="switchBP-mobile">
-                    <ul>
-                        <li class="active"><a href="#"cl>Business</a></li>
-                        <li><a href="#">Private</a></li>
-                    </ul>
-                </div>
-                <div id="logo-plus-hamburger">
-                    <div id="logo-mobile">
-                        <a href="home.html"><img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png"></a>
-                    </div>
-                    <div id="hamburger-menu">
-                        <a href="home.html"><img title="hamburger logo" alt="hamburger logo" src="img/logos/hamburger-menu-512.webp"></a>
+            <div class="header-mobile">
+                <div class="header-elements flex-10">
+                    <nav class="switchBP pt05">
+                        <ul class="hbox">
+                            <li class="active"><a href="#">Business</a></li>
+                            <li><a href="#">Private</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mainNav">
+                        <div class="mobile-menu">
+                            <div class="header-logo">
+                                <a href="home.html"><img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png"></a>
+                            </div>
+                            <div id="menu-mobile">
+                                <img src="img/logos/hamburger-menu-512.webp" style="height: 40px; width: auto;" />
+                            </div>
+                        </div>
+                        <ul class="mobile-menu-items mb2-xs">
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="privacy.html">Privacy and security</a></li>
+                            <li><a href="getStarted.html">Get started</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            </header>
-
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="privacy.html">Privacy & security</a> </li>
-                <li><a href="getStarted.html">Get started</a> </li>
-            </ul>
-
-        </div>
-
-
-
-
+        </header>
 
         <div class="content-box flex-1">
             <div class="CTA-container mb3-xs mb5-md">
@@ -89,43 +84,75 @@
                 </div>
                 <div class="CTA-img flex-4"></div>
             </div>
-            <div class="text-center">
-                <h2 class="mb0-xs mb1-xs mb2-md">What is Telenor ID?</h2>
-                <p class="t-body mb05">Aliquam gravida pellentesque leo nec tempor. Integer ac nisl auctor, hendrerit enim ut, tristique elit. Sed auctor lobortis rutrum. In vel justo dolor. Suspendisse ac libero quis nulla finibus fermentum.</p>
-                <p class="t-body mb3-xs mb5-md">Pellentesque tempor urna quam, a laoreet nunc placerat et. Vivamus imperdiet, lectus ut tempus ultricies, velit est vulputate lectus, tincidunt pretium quam neque sit amet turpis.</p>
-                <h3 class="mb0-xs mb1-xs mb2-md">Apps and services</h3>
-                <ul class="items-container mb05">
-                    <li id="app1" class="app-logo"></li>
-                    <li id="app2" class="app-logo"></li>
-                    <li id="app3" class="app-logo"></li>
-                    <li id="app4" class="app-logo"></li>
-                    <li id="app5" class="app-logo"></li>
-                    <li id="app6" class="app-logo"></li>
-                </ul>
-                <button class="btn-ghost">View more</button>
-                <hr>
-                <hr>
-                <h2 class="mb0-xs mb1-sm">Our partners</h2>
-                <h5 class="mb0-xs mb1-sm">Who is using Telenor ID?</h5>
-                <ul class="items-container">
-                    <li id="partner1" class="partner-logo"></li>
-                    <li id="partner2" class="partner-logo"></li>
-                    <li id="partner3" class="partner-logo"></li>
-                    <li id="partner4" class="partner-logo"></li>
-                    <li id="partner5" class="partner-logo"></li>
-                    <li id="partner6" class="partner-logo"></li>
-                    <li id="partner7" class="partner-logo"></li>
-                    <li id="partner8" class="partner-logo"></li>
-                </ul>
-                <button class="btn-secondary btn-small">See what they say</button>
 
+            <div class="p-content-wrapper text-center">
+                <div class="flex-2"></div>
+                <div class="flex-6">
+                    <h2 class="mb2-xl mb2-lg mb1-xs">What is Telenor ID?</h2>
+                    <p class="t-body mb05">Aliquam gravida pellentesque leo nec tempor. Integer ac nisl auctor, hendrerit enim ut, tristique elit. Sed auctor lobortis rutrum. In vel justo dolor. Suspendisse ac libero quis nulla finibus fermentum.</p>
+                    <p class="t-body mb5-xl mb5-lg mb4-md mb3-xs">Pellentesque tempor urna quam, a laoreet nunc placerat et. Vivamus imperdiet, lectus ut tempus ultricies, velit est vulputate lectus, tincidunt pretium quam neque sit amet turpis.</p>
+                    <h3 class="mb0-xs mb1-xs mb2-md">Apps and services</h3>
+                    <ul class="items-container mb05">
+                        <li id="app1" class="app-logo"></li>
+                        <li id="app2" class="app-logo"></li>
+                        <li id="app3" class="app-logo"></li>
+                        <li id="app4" class="app-logo"></li>
+                        <li id="app5" class="app-logo"></li>
+                        <li id="app6" class="app-logo"></li>
+                    </ul>
+                    <button class="btn-ghost">View more</button>
+                </div>
+                <div class="flex-2"></div>
+            </div>
+            <hr>
+            <div class="p-content-wrapper text-center">
+                <div class="flex-10">
+                    <ul class="list-numbers">
+                        <li class="number-container">
+                            <span>Securing over</span>
+                            <span>60M</span>
+                            <span>end-users globally</span>
+                        </li>
+                        <li class="number-container">
+                            <span>Securing over</span>
+                            <span>60M</span>
+                            <span>end-users globally</span>
+                        </li>
+                        <li class="number-container">
+                            <span>Securing over</span>
+                            <span>60M</span>
+                            <span>end-users globally</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="p-content-wrapper text-center">
+                <div class="flex-2"></div>
+                <div class="flex-6 my3-xs my4-md my5-xl">
+                    <h2 class="mb0-xs mb1-sm">Our partners</h2>
+                    <h5 class="mb0-xs mb1-sm">Who is using Telenor ID?</h5>
+                    <ul class="items-container">
+                        <li id="partner1" class="partner-logo"></li>
+                        <li id="partner2" class="partner-logo"></li>
+                        <li id="partner3" class="partner-logo"></li>
+                        <li id="partner4" class="partner-logo"></li>
+                        <li id="partner5" class="partner-logo"></li>
+                        <li id="partner6" class="partner-logo"></li>
+                        <li id="partner7" class="partner-logo"></li>
+                        <li id="partner8" class="partner-logo"></li>
+                    </ul>
+                    <button class="btn-secondary btn-small">See what they say</button>
+                </div>
+                <div class="flex-2"></div>
             </div>
         </div>
+
         <footer class="footer-container">
             <div class="content-box py1-xs py2-md px2-xs px4-lg">
                 <div class="footer-elements flex-10">
-                    <div class="flex-3 column1">
-                        <div id="logo-compact" class="mb1-xs mb2-md">
+                    <div class="footer-column1 flex-6">
+                        <div class="footer-logo mb1-xs mb2-md">
                             <img title="Telenor ID compact logo" alt="Telenor ID compact logo" src="img/logo-compact.png" />
                         </div>
                         <p class="t-body-sm mb05">
@@ -135,29 +162,27 @@
                         </p>
                         <p class="t-body-sm">&copy; 2005-2020 Telenor ID</p>
                     </div>
-                    <div class="column2">
-                    <div class="flex-1 about">
-                        <ul>
-                            <li class="h3 mb2-md mb1-xs">About</li>
-                            <li class="mb05"><a href="#">About us</a></li>
-                            <li class="mb05"><a href="#">Terms of use</a></li>
-                            <li class="mb05"><a href="#">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex-1">
-                        <ul>
-                            <li class="h3 mb2-md mb1-xs">Resources</li>
-                            <li class="mb05"><a href="#">FAQ</a></li>
-                            <li class="mb05"><a href="#">Get started</a></li>
-                            <li class="mb05"><a href="#">For developers</a></li>
-                        </ul>
-                    </div>
+                    <div class="footer-column2 flex-4">
+                        <div class="flex-1 footer-sm-column">
+                            <ul>
+                                <li class="h3 mb2-md mb1-xs">About</li>
+                                <li class="mb05"><a href="#">About us</a></li>
+                                <li class="mb05"><a href="#">Terms of use</a></li>
+                                <li class="mb05"><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 footer-sm-column">
+                            <ul>
+                                <li class="h3 mb2-md mb1-xs">Resources</li>
+                                <li class="mb05"><a href="#">FAQ</a></li>
+                                <li class="mb05"><a href="#">Get started</a></li>
+                                <li class="mb05"><a href="#">For developers</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 </body>
-
-
-</html>
