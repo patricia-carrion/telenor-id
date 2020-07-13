@@ -53,21 +53,66 @@
             <div class="p-content-wrapper">
                 <div class="flex-2"></div>
                 <div class="p-content flex-6">
-                    <ul>
+                    <ul class="list-cards mb5-xl mb5-lg mb4-md mb3-sm mb3-xs">
                         <li id="contactUs" class="p-section card-container">
                             <div class="hbox flex-wrap">
                                 <span id="contactUsImg" class="icon-lg"></span>
-                                <div class="flex-1">
+                                <div class="flex-1 ml2-md">
                                     <h3 class="h3 card-title mb1-xs mb2-md">1. Contact us</h3>
                                     <p class="t-body">Fill out the contact form so we can start helping you. This initial contact will initiate an informal, non-binding conversation to discuss the needs and possible solutions for your company or product.</p>
                                     <button class="btn-secondary btn-small mt1-xs mt2-md">Contact form</button>
                                 </div>
                             </div>
+                            <div class="contact-form">
+                                <form class="form">
+                                    <fieldset>
+                                        <div class="form-field">
+                                            <label for="fullName">Name
+                                                <input class="input-default" id="fullName" name="fullName" type="text" placeholder="Your first and last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your first and last name'"
+                                                />
+                                            </label>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="workEmail">Work email
+                                                <input class="input-default" id="workEmail" name="workEmail" type="text" placeholder="Your work email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your work email'"
+                                                />
+                                            </label>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="phoneNumber">Phone number
+                                                <input class="input-default" id="phoneNumber" name="phoneNumber" type="text" placeholder="Your phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your phone number'"
+                                                />
+                                            </label>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="companyName">Company name
+                                                <input class="input-default" id="companyName" name="companyName" type="text" placeholder="Company name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company name'"
+                                                />
+                                            </label>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="jobTitle">Job title
+                                                <input class="input-default" id="jobTitle" name="jobTitle" type="text" placeholder="Your job title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your job title'"
+                                                />
+                                            </label>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="jobTitle">Message
+                                                <textarea rows="3" class="input-default" id="jobTitle" name="jobTitle" type="text" placeholder="Your business request or inquiry" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your business request or inquiry'"></textarea>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-buttons">
+                                        <button class="btn-secondary btn-small">Cancel</button>
+                                        <button class="btn-primary btn-small">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
                         </li>
                         <li id="planning" class="p-section card-container">
                             <div class="hbox flex-wrap">
                                 <span id="planningImg" class="icon-lg"></span>
-                                <div class="flex-1">
+                                <div class="flex-1 ml2-md">
                                     <h3 class="h3 card-title mb1-xs mb2-md">2. Budget and planning</h3>
                                     <p class="t-body">Vivamus gravida luctus ex sed fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vulputate id magna at consectetur.</p>
                                 </div>
@@ -76,7 +121,7 @@
                         <li id="launch" class="p-section card-container">
                             <div class="hbox flex-wrap">
                                 <span id="launchImg" class="icon-lg"></span>
-                                <div class="flex-1">
+                                <div class="flex-1 ml2-md">
                                     <h3 class="h3 card-title mb1-xs mb2-md">3. Launch</h3>
                                     <p class="t-body">Nam hendrerit non nisi id sollicitudin. Donec suscipit, ligula at egestas tempus, ex nulla blandit nibh, nec cursus sapien dolor at arcu. Morbi id lorem neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
                                 </div>
