@@ -188,6 +188,12 @@ header {
     }
     }
 
+@media (max-width: @screen-sm-min) {
+    .header-desktop {
+        display: none;
+    }
+}
+
 #logo,
 #logo-compact {
     background-color: transparent;
@@ -351,6 +357,24 @@ header {
 
         }
 
+    }
+
+    .mobile-menu {
+        & ul {
+            & li {
+                border-bottom: 1px solid lightgrey;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            &:first-child {
+                border-top: 1px solid lightgrey;
+            }
+        }
+        & a {
+            color: black;
+            font-size: 16px;
+        }
     }
 
 
@@ -523,6 +547,22 @@ footer {
     }
     }
 
+.column1 {
+    min-width: 200px;
+
+}
+
+.column2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.about {
+    min-width: 50px;
+}
+
+
+
 // Margins
 // Dynamic margins in dynamicSpacing.less
 .m05 {
@@ -639,3 +679,5 @@ ul.list-cards {
         flex: 3;
     }
 }
+
+
