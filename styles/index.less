@@ -49,6 +49,8 @@ table {
     border-spacing: 0;
     }
 
+
+
 // General text
 html {
     font-family: @f-family;
@@ -357,6 +359,46 @@ header {
     width: 90px;
 
     }
+
+
+#contact-picture {
+    background-image: url("../img/features.png");
+
+}
+
+.started-picture {
+    height: 40px;
+    width: 40px;
+
+}
+
+.border-start {
+    border-radius: 15px;
+    border: solid @primary-color;
+    padding: 2rem;
+    border-width: thin;
+}
+
+.icons-title {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1rem;
+
+    & .started-picture {
+        flex: 1;
+    }
+
+    & .step-text {
+        flex: 3;
+    }
+}
+
+
+label {
+    font-family: 'Telenor', 'Roboto', 'Arial', sans-serif;
+}
+
+
 
 li.app-logo {
     margin: 0 .25em;
