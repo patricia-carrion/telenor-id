@@ -181,9 +181,17 @@ header {
     }
 
 .header-container:extend(.hbox, .flex-wrap) {
+    width: 100%;
     .header-elements:extend(.hbox, .flex-wrap, .f-ai-center) {
+        width: 100%;
     }
     }
+
+@media (max-width: @screen-sm-min) {
+    .header-desktop {
+        display: none;
+    }
+}
 
 #logo,
 #logo-compact {
@@ -274,25 +282,61 @@ header {
 .mobile-header {
     display: flex;
     flex-direction: column;
+    width: inherit;
 
     & #switchBP-mobile {
         flex: 1;
-        background-color: lightgrey;
+        //background-color: #9c9c9c;
         text-align: center;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
 
         & ul {
+            justify-content: center;
             display: flex;
             flex-direction: row;
-            justify-content: center;
+
+            & li {
+                margin: 0 .5em;
+                padding: .25em;
+                border: 1px solid transparent;
+
+                &:hover,
+                &.active {
+                    border-bottom-color: @primary-color;
+
+                    & a {
+                        font-weight: @f-medium;
+                        color: @secondary-color;
+                        text-decoration: none;
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        & a {
+            font-size: @t-body-xs;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: @f-light;
+            color: tint(@secondary-color, 60%);
         }
     }
+}
+
 
     & #logo-plus-hamburger {
         flex: 1;
         display: flex;
         flex-direction: row;
+        padding-bottom: .8rem;
+        padding-top: .8rem;
 
         & #logo-mobile {
             & img {
@@ -303,14 +347,35 @@ header {
         }
 
         & #hamburger-menu {
+            flex: 1;
+            text-align: right;
             & img {
                 height: 1.5rem;
-                justify-content: flex-end;
+                padding-right: 1rem;
             }
+
         }
 
     }
-}
+
+    .mobile-menu {
+        & ul {
+            & li {
+                border-bottom: 1px solid lightgrey;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            &:first-child {
+                border-top: 1px solid lightgrey;
+            }
+        }
+        & a {
+            color: black;
+            font-size: 16px;
+        }
+    }
+
 
 
 
@@ -484,6 +549,22 @@ footer {
     }
     }
 
+.column1 {
+    min-width: 200px;
+
+}
+
+.column2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.about {
+    min-width: 50px;
+}
+
+
+
 // Margins
 // Dynamic margins in dynamicSpacing.less
 .m05 {
@@ -600,3 +681,5 @@ ul.list-cards {
         flex: 3;
     }
 }
+
+
