@@ -15,7 +15,7 @@ button[class^="btn-"] {
     border-radius: .25rem;
     border: 1px solid transparent;
     font-size: @t-body-sm;
-    line-height: calc(@t-body-sm + 30%);
+    line-height: calc(@t-body-sm + 50%);
     padding: 1.25rem 1.75rem;
     cursor: pointer;
     text-align: center;
@@ -30,19 +30,19 @@ button[class^="btn-"] {
 .btn-primary:extend(.btn-base) {
     background-color: @primary-color;
     border-color: @primary-color;
-    color: #fff;
+    color: @white;
     &:disabled {
-        background-color: tint(@primary-color, 60%);
-        border-color: tint(@primary-color, 60%);
+        background-color: @lightgray2;
+        border-color: @lightgray2;
     }
     &.active {
-        background-color: shade(@primary-color, 30%);
-        border-color: shade(@primary-color, 60%);
+        background-color: shade(@primary-color, 15%);
+        border-color: shade(@primary-color, 15%);
     }
      &:hover:enabled,
      &.active:hover:enabled {
-        background-color: shade(@primary-color, 60%);
-        border-color: shade(@primary-color, 60%);
+        background-color: shade(@primary-color, 15%);
+        border-color: shade(@primary-color, 15%);
      }
 }
 
@@ -52,20 +52,20 @@ button[class^="btn-"] {
     background-color: transparent;
     color: @primary-color;
     &:disabled {
-        border-color: tint(@primary-color, 60%);
-        color: tint(@primary-color, 60%);
+        border-color: @lightgray2;
+        color: @darkgray;
     }
     &.active {
-        background-color: tint(@primary-color, 80%);
-        border-color: shade(@primary-color, 60%);
-        color: shade(@primary-color, 60%);
+        background-color: @lightgray1;
+        border-color: @primary-color;
+        color: @primary-color;
     }
     &:hover:enabled,
     &.active:hover:enabled {
         background-color: @primary-color;
-        border-color: shade(@primary-color, 10%);
+        border-color: @primary-color;
         box-shadow: none;
-        color: #fff;
+        color: @white;
     }
 }
 
@@ -74,19 +74,19 @@ button[class^="btn-"] {
     font-size: @t-body;
     border-color: transparent;
     background-color: transparent;
-    color: @primary-color;
+    color: @link-color;
     &:disabled {
-        color: tint(@primary-color, 60%);
+        color: @darkgray;
     }
     &.active {
-        background-color: tint(@primary-color, 80%);
-        color: shade(@primary-color, 60%);
+        background-color: @lightgray1;
+        color: shade(@link-color, 50%);
         text-decoration: underline;
     }
     &:hover:enabled,
     &.active:hover:enabled {
         box-shadow: none;
-        color: shade(@primary-color, 60%);
+        color: shade(@link-color, 50%);
         text-decoration: underline;
     }
 }
@@ -95,15 +95,15 @@ button[class^="btn-"] {
 // Add .btn-small to Primary or Secondary buttons
 .btn-small:extend(.btn-base) {
     font-size: @t-body-sm;
-    line-height: calc(@t-body-sm + 30%);
-    padding: 1rem 1.5rem;
+    line-height: calc(@t-body-sm + 50%);
+    padding: .85rem 1.5rem;
 }
 
 // Tabs
 .tabs-dropdown {
     & button.tab:extend(.btn-base) {
-        background-color: @lightgray;
-        color: @primary-color;
+        background-color: @lightgray1;
+        color: @link-color;
         text-align: left;
         width: 100%;
         font-size: 1rem;

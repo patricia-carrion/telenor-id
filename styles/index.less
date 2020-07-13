@@ -49,14 +49,13 @@ table {
     border-spacing: 0;
     }
 
-
-
 // General text
 html {
     font-family: @f-family;
     font-size: @t-body;
     line-height: calc(@t-body + 50%);
     font-weight: @f-regular;
+    color: @text-black;
     }
 
 p.t-body, p.t-body-sm, p.t-body-xs,
@@ -94,15 +93,15 @@ span.t-body {
 
 // Links
 a {
-    color: @primary-color;
+    color: @link-color;
     text-decoration: none;
     background-color: transparent;
     transition: all .1s ease;
-    font-size: @t-body;
-    line-height: calc(@t-body + 30%);
+    font-size: inherit;
+    line-height: inherit;
     &:hover {
-        color: shade(@primary-color, 60%);
-        text-decoration: none;
+        color: shade(@link-color, 50%);
+        text-decoration: underline;
         }
     }
 
@@ -177,8 +176,8 @@ hr {
 header {
     position: sticky;
     top: 0;
-    background-color: #fff;
-    // box-shadow: .05em .05em .05em @lightgray;
+    background-color: @white;
+    // box-shadow: .05em .05em .05em @lightgray1;
     }
 
 .header-container:extend(.hbox, .flex-wrap) {
@@ -210,6 +209,13 @@ header {
 #switchBP {
     background-color: transparent;
     text-align: center;
+    & a {
+        font-size: @t-body-xs;
+        font-weight: @f-light;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: tint(@darkgray, 50%);
+        }
     & ul {
         justify-content: center;
         & li {
@@ -221,7 +227,7 @@ header {
                 border-bottom-color: @primary-color;
                 & a {
                     font-weight: @f-medium;
-                    color: @secondary-color;
+                    color: @text-black;
                     text-decoration: none;
                     }
                 }
@@ -233,13 +239,6 @@ header {
                 }
             }
         }
-    & a {
-        font-size: @t-body-xs;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-        font-weight: @f-light;
-        color: tint(@secondary-color, 60%);
-        }
     }
 
 #mainNav {
@@ -250,18 +249,18 @@ header {
         justify-content: flex-end;
         li:extend(.hbox, .f-ai-center) {
             padding: 0 1.5em;
-        &:first-child {
-            padding-left: 0;
-            }
-        &:last-child {
-            padding-right: 0;
-            }
+            &:first-child {
+                padding-left: 0;
+                }
+            &:last-child {
+                padding-right: 0;
+                }
             }
         }
     & a {
         font-size: @t-body;
         text-decoration: none;
-        color: @secondary-color;
+        color: @text-black;
         white-space: nowrap;
         &:hover {
             color: @primary-color;
@@ -317,7 +316,7 @@ header {
 
 // CTA
 .CTA-container:extend(.hbox, .flex-wrap) {
-    background-color: @lightblue;
+    background-color: @bg-lightblue;
         .CTA-img {
             background-image: url("../img/home.png");
             background-size: cover;
@@ -358,13 +357,15 @@ header {
         position: sticky;
         top: 150px;
         text-align: right;
+        margin-left: 1.5rem;
         & ul li:extend(.mb05) {
-        }
+            }
         & a {
             font-size: @t-body-sm;
-            color: @secondary-color;
+            color: @text-black;
             &:hover, &.active {
-                color: @primary-color;
+                color: @link-color;
+                text-decoration: none;
                 }
             }
         }
@@ -375,7 +376,7 @@ header {
     }
 
 .CTA-getStarted {
-    background-color: @lightgray;
+    background-color: @lightgray1;
     border-radius: .25rem;
     padding: 30px;
     text-align: center;
@@ -394,9 +395,9 @@ header {
 
 .app-logo {
     background-size: cover;
-    background-color: @lightgray;
+    background-color: @lightgray1;
     overflow: hidden;
-    border: 1px solid @lightgray;
+    border: 1px solid @lightgray2;
     border-radius: .75em;
     height: 90px;
     width: 90px;
@@ -469,10 +470,11 @@ li.app-logo {
 // Footer
 footer {
     background-color: @primary-color;
-    color: #fff;
+    color: @white;
     & a {
-        color: #fff;
+        color: @white;
         &:hover {
+            color: @white;
         }
     }
     }
@@ -561,7 +563,7 @@ ul.list-cards {
 
 .card-container {
     border-radius: .25rem;
-    border: 1px solid @gray;
+    border: 1px solid @lightgray2;
     padding: 2rem;
     & .card-title {
         color: @primary-color;
