@@ -544,7 +544,14 @@ footer {
     min-width: 200px;
 }
 
-// Cards
+// Cards and numbers
+ul.list-numbers:extend(.hbox, .flex-wrap) {
+    justify-content: center;
+    }
+
+.number-container:extend(.vbox) {
+}
+
 ul.list-cards {
     & li {
         margin: 2em 0;
