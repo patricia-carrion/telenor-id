@@ -113,22 +113,28 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
     font-size: @hero-title;
+    line-height: calc(@hero-title + .5rem);
     }
 h2, .h2 {
     font-size: @xl-title;
+    line-height: calc(@xl-title + .5rem);
     }
 h3, .h3,
 .section-title {
     font-size: @lg-title;
+    line-height: calc(@lg-title + .5rem);
     }
 h4, .h4 {
     font-size: @md-title;
+    line-height: calc(@md-title + .5rem);
     }
 h5, .h5 {
     font-size: @sm-title;
+    line-height: calc(@sm-title + .5rem);
     }
 h6, .h6 {
-    font-size: @xm-title;
+    font-size: @xs-title;
+    line-height: calc(@xs-title + .5rem);
     }
 
 /* Alignments and text behaviours */
@@ -275,7 +281,10 @@ header {
         & .mobile-menu:extend(.hbox) {
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 1rem 1rem 2rem;
+            padding: 1rem 2rem;
+            & i[class^="icon-"] {
+                font-size: @t-body-xl;
+                }
             }
         & ul.mobile-menu-items {
             text-align: left;
@@ -457,13 +466,7 @@ header {
     }
 
 li.app-logo {
-    margin: 0 .25em;
-    &:first-child {
-        margin-left: 0;
-        }
-    &:last-child {
-        margin-right: 0;
-        }
+    margin: .25em;
     &#app1 {
         // background-image: url("..."); Add icon image
         }
@@ -519,19 +522,25 @@ li.app-logo {
         }
     }
 
-.partners-apps {
+.partner-apps {
     .items-container {
         justify-content: left;
+        }
+    }
+
+.partner-details {
+    & .partner-logo {
+        margin: 0 auto;
         }
     }
 
 // Lists and cards
 ul.list-numbers:extend(.hbox, .flex-wrap) {
     justify-content: center;
+    & li.number-container:extend(.vbox) {
+        margin: 2rem;
+        }
     }
-
-.number-container:extend(.vbox) {
-}
 
 ul.list-cards {
     & li {
@@ -571,12 +580,14 @@ ul.list-cards {
         }
     }
 
-ul.partners-numbers:extend(.hbox, .flex-wrap) {
+ul.partner-numbers:extend(.hbox, .flex-wrap) {
+    margin-left: .25rem;
+    margin-right: .25rem;
     & li {
         width: 50%;
         box-sizing: border-box;
         padding: 1rem;
-        border-bottom: 1px solid @lightgray2;
+        border-bottom: 1px solid @lightgray1;
         }
     }
 
@@ -614,36 +625,4 @@ footer {
 
 .footer-sm-column {
     min-width: 200px;
-}
-
-
-
-
-
-.logo-pp {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    overflow: hidden;
-    height: 60px;
-    margin: 1em 1em;
-
-
-}
-
-#telenor-logo {
-    background-image: url("../img/logos/Telenor_Logo.svg");
-}
-
-#amara-logo {
-    background-image: url("../img/logos/amara.png");
-}
-
-#codelab-logo {
-    background-image: url("../img/logos/code-lab.png");
-}
-
-#aven-logo {
-    background-image: url("../img/logos/aven.png");
 }
