@@ -516,34 +516,6 @@ li.app-logo {
         }
     }
 
-// Footer
-footer {
-    background-color: @primary-color;
-    color: @white;
-    & a {
-        color: @white;
-        &:hover {
-            color: @white;
-        }
-    }
-    }
-
-.footer-container:extend(.hbox, .flex-wrap) {
-    .footer-elements:extend(.hbox, .flex-wrap, .f-ai-start) {
-    }
-    }
-
-.footer-column1 {
-    min-width: 300px;
-    }
-
-.footer-column2:extend(.hbox) {
-}
-
-.footer-sm-column {
-    min-width: 200px;
-}
-
 // Cards and numbers
 ul.list-numbers:extend(.hbox, .flex-wrap) {
     justify-content: center;
@@ -590,4 +562,39 @@ ul.list-cards {
         }
     }
 
+// Forms
+.contact-form {
+    display: none;
+    }
+.h-btn-form:extend(.hbox, .flex-wrap) {
+    justify-content: center;
+    }
+
+// Footer
+footer {
+    background-color: @primary-color;
+    color: @white;
+    & a {
+        color: @white;
+        &:hover {
+            color: @white;
+        }
+    }
+    }
+
+.footer-container:extend(.hbox, .flex-wrap) {
+    .footer-elements:extend(.hbox, .flex-wrap, .f-ai-start) {
+    }
+    }
+
+.footer-column1 {
+    min-width: 300px;
+    }
+
+.footer-column2:extend(.hbox) {
+}
+
+.footer-sm-column {
+    min-width: 200px;
+}
 
