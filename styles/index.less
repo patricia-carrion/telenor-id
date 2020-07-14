@@ -389,6 +389,9 @@ header {
     background-size: cover;
     overflow: hidden;
     background-position-y: center;
+    &#partnersImg {
+        background-image: url("../img/partners.png");
+        }
     &#featuresImg {
         background-image: url("../img/features.png");
         }
@@ -516,7 +519,13 @@ li.app-logo {
         }
     }
 
-// Cards and numbers
+.partners-apps {
+    .items-container {
+        justify-content: left;
+        }
+    }
+
+// Lists and cards
 ul.list-numbers:extend(.hbox, .flex-wrap) {
     justify-content: center;
     }
@@ -562,73 +571,15 @@ ul.list-cards {
         }
     }
 
-<<<<<<< HEAD
-.t-p-partners {
-    display: flex;
-    flex-direction: row;
-}
-
-.logo-pp {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    overflow: hidden;
-    height: 60px;
-    margin: 1em 1em;
-
-
-}
-
-#telenor-logo {
-    background-image: url("../img/logos/Telenor_Logo.svg");
-}
-
-#amara-logo {
-    background-image: url("../img/logos/amara.png");
-}
-
-#codelab-logo {
-    background-image: url("../img/logos/code-lab.png");
-}
-
-#aven-logo {
-    background-image: url("../img/logos/aven.png");
-}
-
-.facts-partners {
-
-    & ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        & li {
-            border-bottom: 1px solid lightgrey;
-            width: 46%;
-            padding-left: 1rem;
-            padding-bottom: .8rem;
-            padding-top: .8rem;
-            font-weight: 300;
+ul.partners-numbers:extend(.hbox, .flex-wrap) {
+    & li {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 1rem;
+        border-bottom: 1px solid @lightgray2;
         }
-
-
     }
 
-}
-
-.p-apps {
-
-    & .items-container {
-        justify-content: left;
-        margin-bottom: 3rem;
-    }
-
-    border-bottom: 1px solid lightgrey;
-}
-
-=======
 // Forms
 .contact-form {
     display: none;
@@ -664,5 +615,35 @@ footer {
 .footer-sm-column {
     min-width: 200px;
 }
->>>>>>> fd296eb82e83d75aa2d84e9901523129e2eb3df3
 
+
+
+
+
+.logo-pp {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    overflow: hidden;
+    height: 60px;
+    margin: 1em 1em;
+
+
+}
+
+#telenor-logo {
+    background-image: url("../img/logos/Telenor_Logo.svg");
+}
+
+#amara-logo {
+    background-image: url("../img/logos/amara.png");
+}
+
+#codelab-logo {
+    background-image: url("../img/logos/code-lab.png");
+}
+
+#aven-logo {
+    background-image: url("../img/logos/aven.png");
+}
