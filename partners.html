@@ -3,127 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <title>Telenor ID wbsite - partners</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="../fonts/Telenor/Telenor.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
 
-<header>
-<div id="logo">
-    <img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png">
-</div>
-<nav id="switchBP">
-    <ul>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Private</a></li>
-    </ul>
-</nav>
-<nav id="mainNav">
-    <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Privacy & Security</a></li>
-        <li><button class="btn-secondary">Get started</button></li>
-    </ul>
-</nav>
-</header>
-
-<div id="partners-image">
-</div>
-
-
-<div class="sticky-menu">
-    <div class="quick-access">Quick access</div>
-    <div class="quick-partners">
-        <ul>
-            <li>Telenor ASA</li>
-            <li>Telenor ASA</li>
-            <li>Telenor ASA</li>
-            <li>Telenor ASA</li>
-            <li>Telenor ASA</li>
-        </ul>
-    </div>
-</div>
-
-<div>
-    <h2>Our partners</h2>
-    <p>Paragraph text</p>
-</div>
-
-<div>
-    <div class="partner">
-        <div class="parnter-text">
-            <h3 class="partner-heading">Telenor ASA</h3>
-            <p class="partner-paragraph">Partner paragraph here</p>
+<div class="main-container">
+    <header class="header-container">
+        <div class="header-desktop content-box py1-xs py2-md px2-xs px4-lg">
+            <div class="header-elements flex-10">
+                <div class="header-logo">
+                    <a href="home.html"><img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png"></a>
+                </div>
+                <nav class="switchBP mx2-xs">
+                    <ul class="hbox">
+                        <li class="active"><a href="#">Business</a></li>
+                        <li><a href="#">Private</a></li>
+                    </ul>
+                </nav>
+                <nav class="mainNav flex-1">
+                    <ul class="hbox">
+                        <li><a href="features.html" class="active">Features</a></li>
+                        <li><a href="privacy.html">Privacy and security</a></li>
+                        <li><button type="button" class="btn-secondary btn-small" onclick="location.href='getStarted.html'">Get started</button></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="parnter-logo"></div>
-        <div class="partner-facts">
-            <ul>
-                <li><span class="icon"></span>90% Conversion rate</li>
-                <li><span class="icon"></span>15 apps and  services</li>
-                <li><span class="icon"></span>20 million users</li>
-            </ul>
+        <div class="header-mobile">
+            <div class="header-elements flex-10">
+                <nav class="switchBP pt05">
+                    <ul class="hbox">
+                        <li class="active"><a href="#">Business</a></li>
+                        <li><a href="#">Private</a></li>
+                    </ul>
+                </nav>
+                <div class="mainNav">
+                    <div class="mobile-menu">
+                        <div class="header-logo">
+                            <a href="home.html"><img title="Telenor ID logo" alt="Telenor ID logo" src="img/logo.png"></a>
+                        </div>
+                        <div id="menu-mobile">
+                            <img src="img/logos/hamburger-menu-512.webp" style="height: 40px; width: auto;" />
+                        </div>
+                    </div>
+                    <ul class="mobile-menu-items mb2-xs">
+                        <li><a href="features.html" class="active">Features</a></li>
+                        <li><a href="privacy.html">Privacy and security</a></li>
+                        <li><a href="getStarted.html">Get started</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="partner-apps">
-            <div class="App"></div>
-            <div class="App"></div>
-            <div class="App"></div>
-            <div class="App"></div>
+    </header>
+
+    <div class="content-box flex-1">
+        <div id="featuresImg" class="header-img mb3-xs mb4-md mb5-xl"></div>
+        <div class="p-content-wrapper text-center">
+            <div class="flex-2"></div>
+            <div class="flex-6">
+                <h2 class="mb2-xl mb2-lg mb1-xs">Our partners</h2>
+                <p class="t-body mb5-xl mb5-lg mb4-md mb3-xs">Nam nunc mi, imperdiet at metus mollis, mattis elementum felis. Donec sodales rhoncus venenatis. Aliquam feugiat id tellus vitae tempor. Aliquam gravida pellentesque leo nec tempor.</p>
+            </div>
+            <div class="flex-2"></div>
+        </div>
+        <div class="p-content-wrapper">
+            <div class="flex-2"></div>
+            <div class="p-content flex-6">
+                <div id="seamlessUX" class="p-section mb3-xs mb4-md mb5-xlg">
+                    <h3 class="h3 mb1-xs mb2-md mb3-xlg">Telenor ASA</h3>
+                    <div class="t-p-partners">
+                    <p class="t-body mb1-xs mb2-md mb3-xlg flex-1">Nam nunc mi, imperdiet at metus mollis, mattis elementum felis. Donec sodales rhoncus venenatis. Aliquam feugiat id tellus vitae tempor. Aliquam gravida pellentesque leo nec tempor.</p>
+                    <div class="logo-pp flex-1" id="telenor-logo"></div>
+                    </div>
+                    <div class="facts-partners mb2-md">
+                        <ul>
+                            <li class="mb05">90% conversion rate</li>
+                            <li class="mb05">15 apps and services</li>
+                            <li class="mb05">20 million users</li>
+                        </ul>
+                    </div>
+                    <div class="p-apps">
+                        <h5 class="mb2-md mb1-xs">Apps and services</h5>
+                        <ul class="items-container">
+                            <li id="app1-telenor" class="app-logo"></li>
+                            <li id="app2-telenor" class="app-logo"></li>
+                            <li id="app3-telenor" class="app-logo"></li>
+                            <li id="app4-telenor" class="app-logo"></li>
+                            <li id="app5-telenor" class="app-logo"></li>
+                            <li id="app6-telenor" class="app-logo"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="telecom" class="p-section mb3-xs mb4-md mb5-xlg">
+                    <h3 class="h3 mb1-xs mb2-md mb3-xlg">Amara</h3>
+                    <div class="t-p-partners">
+                        <p class="t-body mb1-xs mb2-md mb3-xlg flex-1">Integer ac nisl auctor, hendrerit enim ut, tristique elit. Curabitur rhoncus tristique congue. Sed id interdum leo. Mauris cursus tortor lectus, sit amet pharetra magna interdum eu. Aliquam gravida pellentesque leo nec tempor. Integer ac nisl auctor, hendrerit enim ut, tristique elit.</p>
+                        <div class="logo-pp flex-1" id="amara-logo"></div>
+                    </div>
+                        <div class="facts-partners mb2-md">
+                        <ul>
+                            <li class="mb05">90% conversion rate</li>
+                            <li class="mb05">15 apps and services</li>
+                            <li class="mb05">20 million users</li>
+                        </ul>
+                    </div>
+                    <div class="p-apps">
+                        <h5 class="mb2-md mb1-xs">Apps and services</h5>
+                        <ul class="items-container">
+                            <li id="app1-amara" class="app-logo"></li>
+                            <li id="app2-amara" class="app-logo"></li>
+                            <li id="app3-amara" class="app-logo"></li>
+                            <li id="app4-amara" class="app-logo"></li>
+                            <li id="app5-amara" class="app-logo"></li>
+                            <li id="app6-amara" class="app-logo"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="enhancedSecurity" class="p-section mb3-xs mb4-md mb5-xlg">
+                    <h3 class="h3 mb1-xs mb2-md mb3-xlg">CodeLab</h3>
+                    <div class="t-p-partners">
+                        <p class="t-body mb1-xs mb2-md mb3-xlg flex-1">Integer ac nisl auctor, hendrerit enim ut, tristique elit. Curabitur rhoncus tristique congue. Sed id interdum leo. Mauris cursus tortor lectus, sit amet pharetra magna interdum eu. Aliquam gravida pellentesque leo nec tempor. Integer ac nisl auctor, hendrerit enim ut, tristique elit.</p>
+                        <div class="logo-pp flex-1" id="codelab-logo"></div>
+                    </div>
+                    <div class="facts-partners mb2-md">
+                        <ul>
+                            <li class="mb05">90% conversion rate</li>
+                            <li class="mb05">15 apps and services</li>
+                            <li class="mb05">20 million users</li>
+                        </ul>
+                    </div>
+                    <div class="p-apps">
+                        <h5 class="mb2-md mb1-xs">Apps and services</h5>
+                        <ul class="items-container">
+                            <li id="app1-cl" class="app-logo"></li>
+                            <li id="app2-cl" class="app-logo"></li>
+                            <li id="app3-cl" class="app-logo"></li>
+                            <li id="app4-cl" class="app-logo"></li>
+                            <li id="app5-cl" class="app-logo"></li>
+                            <li id="app6-cl" class="app-logo"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="selfService" class="p-section mb3-xs mb4-md mb5-xlg">
+                    <h3 class="h3 mb1-xs mb2-md mb3-xlg">Aven</h3>
+                    <div class="t-p-partners">
+                        <p class="t-body mb1-xs mb2-md mb3-xlg flex-1">Nam nunc mi, imperdiet at metus mollis, mattis elementum felis. Donec sodales rhoncus venenatis. Aliquam feugiat id tellus vitae tempor. Aliquam gravida pellentesque leo nec tempor.</p>
+                        <div class="logo-pp flex-1" id="aven-logo"></div>
+                    </div>
+                    <div class="facts-partners mb2-md">
+                        <ul>
+                            <li class="mb05"><span><img src="img/logos/hamburger-menu-512.webp" style="height: 30px; width: auto;" /></span>90% conversion rate</li>
+                            <li class="mb05">15 apps and services</li>
+                            <li class="mb05">20 million users</li>
+                        </ul>
+                    </div>
+                    <div class="p-apps">
+                        <h5 class="mb2-md mb1-xs">Apps and services</h5>
+                        <ul class="items-container">
+                            <li id="app1-aven" class="app-logo"></li>
+                            <li id="app2-aven" class="app-logo"></li>
+                            <li id="app3-aven" class="app-logo"></li>
+                            <li id="app4-aven" class="app-logo"></li>
+                            <li id="app5-aven" class="app-logo"></li>
+                            <li id="app6-aven" class="app-logo"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="CTA-getStarted my3-xs my4-md my5-xl">
+                    <h4 class="f-medium mb2-xl mb2-xl mb2-md mb1-xs">Interested in having Telenor ID as your sign-in solution?</h4>
+                    <p class="t-body mb2-xl mb2-xl mb2-md mb1-xs">Contact our team of experts and learn the steps for an easy integration</p>
+                    <button class="btn-primary">Get started</button>
+                </div>
+            </div>
+            <div class="flex-1">
+                <div class="p-quick-access">
+                    <div class="mb05">
+                        <span class="t-body-xs">Quick access</span>
+                    </div>
+                    <ul>
+                        <li><a href="#seamlessUX" class="active">Telenor ASA</a></li>
+                        <li><a href="#telecom">Amara</a></li>
+                        <li><a href="#enhancedSecurity">CodeLab</a></li>
+                        <li><a href="#selfService">Aven</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-1"></div>
         </div>
     </div>
-</div>
 
-<div>
-    <div class="partner">
-        <div class="parnter-text">
-            <h3 class="partner-heading">Telenor ASA</h3>
-            <p class="partner-paragraph">Partner paragraph here</p>
+    <footer class="footer-container">
+        <div class="content-box py1-xs py2-md px2-xs px4-lg">
+            <div class="footer-elements flex-10">
+                <div class="footer-column1 flex-6">
+                    <div class="footer-logo mb1-xs mb2-md">
+                        <img title="Telenor ID compact logo" alt="Telenor ID compact logo" src="img/logo-compact.png" />
+                    </div>
+                    <p class="t-body-sm mb05">
+                        <span class="f-medium">Telenor Digital AS Trondheim</span><br />
+                        Otto Nielsens veg 12 7052<br />
+                        Trondheim, Norway
+                    </p>
+                    <p class="t-body-sm">&copy; 2005-2020 Telenor ID</p>
+                </div>
+                <div class="footer-column2 flex-4">
+                    <div class="flex-1 footer-sm-column">
+                        <ul>
+                            <li class="h3 mb2-md mb1-xs">About</li>
+                            <li class="mb05"><a href="#">About us</a></li>
+                            <li class="mb05"><a href="#">Terms of use</a></li>
+                            <li class="mb05"><a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 footer-sm-column">
+                        <ul>
+                            <li class="h3 mb2-md mb1-xs">Resources</li>
+                            <li class="mb05"><a href="#">FAQ</a></li>
+                            <li class="mb05"><a href="#">Get started</a></li>
+                            <li class="mb05"><a href="#">For developers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="parnter-logo"></div>
-        <div class="partner-facts">
-            <ul>
-                <li><span class="icon"></span>90% Conversion rate</li>
-                <li><span class="icon"></span>15 apps and  services</li>
-                <li><span class="icon"></span>20 million users</li>
-            </ul>
-        </div>
-        <div class="partner-apps">
-            <div class="App"></div>
-            <div class="App"></div>
-            <div class="App"></div>
-            <div class="App"></div>
-        </div>
-    </div>
-</div>
+    </footer>
 
-<div class="get-started-bottom">
-    <h3>Interested in having Telenor ID as your sign-in sulotion?</h3>
-    <p>Contact our team of experts and learn the steps for an easy integration</p>
-    <button>Get started</button>
-</div>
-
-
-<footer>
-    <div class="foot1">
-        <div id="logo2"><img title="Telenor ID compact logo" alt="Telenor ID compact logo" src="image3.png" /></div>
-        <p class="address">Telenor Digital AS Trondheim <br />Otto Nielsens veg 12 7052 <br /> Trondheim, Norway </p>
-        <p>2005-2020 Telenor ID</p>
-    </div>
-    <div class="foot2">
-        <ul>
-            <li><h3>About</h3></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Privacy policy</a></li>
-        </ul>
-    </div>
-    <div class="foot3">
-        <ul>
-            <li><h3>Help</h3></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Get started</a></li>
-            <li><a href="#">For developers</a></li>
-        </ul>
-    </div>
-
-</footer>
 
 
 </body>
